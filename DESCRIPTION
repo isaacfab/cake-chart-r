@@ -1,0 +1,28 @@
+Package: cakechart
+Title: Rectangular Alternatives to Pie Charts
+Version: 0.1.0
+Authors@R:
+    person("Isaac", "Faber", , email = "isaac@example.com", role = c("aut", "cre"))
+Description: Pie charts are hard to interpret because humans struggle to compare
+    angles and arc lengths. The 'cakechart' package provides rectangular
+    alternatives — "cake charts" — that subdivide a rectangle into proportional
+    slices. This plays to human strengths at comparing lengths and positions along
+    a common scale. Works both standalone via cake_chart() and as a 'ggplot2'
+    extension via geom_cake().
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    ggplot2 (>= 3.5.0),
+    grid,
+    rlang,
+    cli,
+    scales,
+    stats
+Suggests:
+    testthat (>= 3.0.0),
+    vdiffr,
+    knitr,
+    rmarkdown
+Config/testthat/edition: 3
