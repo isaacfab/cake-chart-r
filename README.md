@@ -6,9 +6,7 @@
 into proportional pieces along a common scale. It is the chart you should have
 been reaching for every time you reached for a pie.
 
-```r
-cake_chart(c(Chrome = 65, Safari = 19, Edge = 5, Firefox = 3, Other = 8))
-```
+![Pie vs. cake on the same browser-share data](man/figures/pie-vs-cake.png)
 
 Works as a one-line standalone function and as a first-class `ggplot2`
 extension (`geom_cake()`, `scale_fill_cake()`, `theme_cake()`).
@@ -77,6 +75,8 @@ cake_chart(budget, x = share, fill = program,
            title = "U.S. federal outlays, share of total")
 ```
 
+![Federal budget cake chart](man/figures/cake-budget.png)
+
 ---
 
 ## ggplot2 integration
@@ -103,6 +103,8 @@ ggplot(elections, aes(x = share, fill = party)) +
   facet_wrap(~ year, ncol = 1) +
   labs(title = "National vote share by year")
 ```
+
+![Faceted cake charts across three election years](man/figures/cake-faceted.png)
 
 Compose it like any other geom — title, caption, custom palettes, the whole
 `ggplot2` toolbox is available:
@@ -140,6 +142,20 @@ grid you don't need so the data carries the chart.
 ## When *should* you use a pie chart?
 
 Honestly? When your boss makes you. Otherwise: use a cake.
+
+---
+
+## Regenerating the README figures
+
+The PNGs in `man/figures/` are produced by a single script. From the package
+root:
+
+```sh
+Rscript tools/readme/build_figures.R
+```
+
+The script depends on `ggplot2`, `patchwork`, and a working install of
+`cakechart` itself (`devtools::install()` or `devtools::load_all()` first).
 
 ---
 
