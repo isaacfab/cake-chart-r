@@ -3,7 +3,7 @@
 > **Friends don't let friends make pie charts.**
 
 `cakechart` is a small R package that draws **cake charts** — rectangles, sliced
-into proportional pieces along a common scale. It is the chart you should have
+into proportional pieces along a common scale, you know, like a sheet cake. It is the chart you should have
 been reaching for every time you reached for a pie.
 
 ![Pie vs. cake on the same browser-share data](man/figures/pie-vs-cake.png)
