@@ -81,7 +81,7 @@ elections <- data.frame(
 )
 
 faceted <- ggplot(elections, aes(x = share, fill = party)) +
-  geom_cake(orientation = "horizontal", min_pct_label = 0.03) +
+  geom_cake(orientation = "vertical", min_pct_label = 0.03) +
   scale_fill_manual(values = okabe_ito[c(5, 6, 8)]) +
   theme_cake() +
   facet_wrap(~ year, ncol = 1, strip.position = "left") +

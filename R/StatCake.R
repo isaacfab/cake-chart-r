@@ -40,7 +40,6 @@ StatCake <- ggproto("StatCake", Stat,
       show_label = layout$show_label,
       label = layout$label,
       fill = layout$label,
-      PANEL = 1L,
       group = seq_len(nrow(layout)),
       stringsAsFactors = FALSE
     )
